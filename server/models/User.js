@@ -7,10 +7,10 @@ const UserSchema = new Schema({
     email: String,
     password: String,
     role: String,
-    imagePath: String,
-    emailVerificationToken: String,
-    title: String,
-    skills: Array
+    createdAt: {
+        default: Date.now(),
+        type: Date
+    }
 }, {
     timestamps: true
 });
